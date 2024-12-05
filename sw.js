@@ -1,5 +1,6 @@
 let bodys = "This notification was generated from a push! from let"
 let titles = "Explore this new world! from let"
+let message = "Hello world! edited"
 self.addEventListener('push', function(e) {
     var options = {
         body: bodys,
@@ -14,5 +15,5 @@ self.addEventListener('push', function(e) {
             {action: 'close', title: 'Close', icon:'images/xmark.png'}
         ] 
     };
-    e.waitUntil(self.registration.showNotification('Hello world!', options))
+    e.waitUntil(self.registration.showNotification(message, options))
 });
