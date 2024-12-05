@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function copy_to_clipboard( elm_id ) {
+                var text = document.getElementById( elm_id ).innerHTML;
+                navigator.clipboard.writeText( text );
+            }
+    </script>
 </head>
 <body>
     <button onclick="subscribe()">subscribe</button>
     <p id="one">Key here</p>
-    <button onclick="copy_to_clipboard('one')">copy first</button>
+    <button onclick="copy_to_clipboard('one')">Copy Key</button>
     
     <script>
         addEventListener('load',async () => {
@@ -24,11 +30,6 @@
             })
             console.log(JSON.stringify(push))
             document.getElementById("one").innerText = JSON.stringify(push);
-
-            function copy_to_clipboard( elm_id ) {
-                var text = document.getElementById( elm_id ).innerHTML;
-                navigator.clipboard.writeText( text );
-            }
         }
 
     </script>
