@@ -12,5 +12,5 @@ self.addEventListener('push', function(e) {
             {action: 'close', title: 'Close', icon:'images/xmark.png'}
         ] 
     };
-    e.waitUntil(self.ServiceWorkerRegistration.showNotification('Hello world!', options))
+    e.waitUntil(self.registration.showNotification('Hello world!', options))
 });
