@@ -1,6 +1,8 @@
+let bodys = "This notification was generated from a push! from let"
+let titles = "Explore this new world! from let"
 self.addEventListener('push', function(e) {
     var options = {
-        body: 'This notification was generated from a push!',
+        body: bodys,
         icon: 'images/example.png',
         vibration: [100, 50, 100],
         data: {
@@ -8,7 +10,7 @@ self.addEventListener('push', function(e) {
             primaryKey: '2'
         },
         actions: [
-            {action: 'explore', title: 'Explore this new world', icon: 'images/checkmark.png'},
+            {action: 'explore', title: titles, icon: 'images/checkmark.png'},
             {action: 'close', title: 'Close', icon:'images/xmark.png'}
         ] 
     };
