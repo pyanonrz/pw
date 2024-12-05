@@ -5,4 +5,8 @@ let vapidKey = {
     privateKey: 'CZtf_JUxmXkCKbzwaKedPPO9BFC99U2rk-GUYDbYAa8'
 }
 
-console.log(push);
+push.setVapidDetails('mailto:test@code.co.uk', vapidKey.publicKey, vapidKey.privateKey);
+
+let sub = {};
+
+push.sendNotification(sub, 'test message')
